@@ -1,0 +1,1 @@
+print(sum([not bool([x for x in t[r][:c] if x>=t[r][c]] and [x for x in t[r][c+1:] if x>=t[r][c]] and [x[c] for i,x in enumerate(t) if x[c]>=t[r][c] and i<r] and [x[c] for i,x in enumerate(t) if x[c]>=t[r][c] and i>r]) for t in [[[int(y) for y in x] for x in open("d8_input.txt").read().split('\n')]] for r in range(len(t)) for c in range(len(t[r]))]))
