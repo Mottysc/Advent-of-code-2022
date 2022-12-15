@@ -1,0 +1,18 @@
+Pseudocode for d12
+Here is an algorithm that solves Dijkstra's algorithm for a grid of numbers where you can only take a path that increases by one number each time:
+
+1. Initialize the distances of all nodes to be infinity, except for the starting node, which has a distance of 0.
+
+2. Create a priority queue of nodes, where the priority is determined by the distance of the node from the starting node.
+
+3. While the priority queue is not empty, do the following:
+
+- Remove the node with the smallest distance from the priority queue.
+- For each neighbor of the removed node that is one greater than the removed node:
+    - calculate the distance to that neighbor by adding the weight of the edge between the removed 
+        node and the neighbor to the distance of the removed node
+    - If the calculated distance is less than the current distance of the neighbor:
+    - - Update the distance of the neighbor to be the calculated distance.
+- Add the neighbors of the removed node to the priority queue.
+- Once all nodes have been explored, the distances of each node will represent the shortest distance 
+    from the starting node to that node.
