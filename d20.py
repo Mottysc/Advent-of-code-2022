@@ -6,9 +6,10 @@ class Number():
         self.number = number
         self.changed = False
 
+
 number_objs = [Number(x) for x in encrypted_numbers]
 print(number_objs)
 
 length_of_nums = len(number_objs)
-for x in range(length_of_nums):
+#for x in range(length_of_nums):
     
